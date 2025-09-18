@@ -38,6 +38,7 @@ namespace ProductApps
                 totalChargeTextBox.Text = Convert.ToString(cProduct.TotalPayment + deliveryCharge);
                 int wrapCharge = 5;
                 totalWrapTextBox.Text = Convert.ToString(cProduct.TotalPayment + deliveryCharge + wrapCharge);
+                totalGSTTextBox.Text = Convert.ToString((cProduct.TotalPayment + deliveryCharge + wrapCharge) * Convert.ToDecimal(1.1));
             }
             catch (FormatException)
             {
